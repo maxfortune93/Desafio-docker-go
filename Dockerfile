@@ -5,7 +5,7 @@ COPY main.go ./
 
 RUN go build -o /full-go
 
-FROM alpine
+FROM scratch
 COPY --from=multistage /full-go /full-go
 
 WORKDIR /
